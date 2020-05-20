@@ -11,6 +11,8 @@
     "prebuild-master": "npm run clean && mkdir out && cp -R img out",
     "build-master": "npm run wipe-es6biblio && ecmarkup --verbose spec.html out/index.html --css out/ecmarkup.css --js out/ecmarkup.js",
     "build": "npm run build-master",
+    "build-blame": "mkdir -p out && node scripts/blame-filter.js && npm run wipe-es6biblio && ecmarkup --verbose spec-blame.html out/blame.html --css out/ecmarkup.css --js out/ecmarkup.js && cp scripts/blame.js scripts/blame.css out/",
+    "build-for-blame": "npm run build-blame",
     "build-for-pdf": "npm run build-master -- --old-toc",
     "build-travis": "npm run build-master && npm run build-spec",
     "prebuild-snapshot": "npm run clean",

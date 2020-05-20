@@ -1,0 +1,23 @@
+.blame-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    padding: 10px;
+    background: #404040;
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 3px;
+    color: white;
+    text-align: left;
+    z-index: 200;
+    cursor: auto;
+}
+
+.blame-popup-author-and-date {
+    font-style: italic;
+}
+
+.blame-popup-link a {
+    color: inherit;
+    text-decoration: underline;
+}
